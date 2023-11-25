@@ -1,0 +1,82 @@
+.play__page{
+  display: flex;
+  flex-direction: row;
+  background-color: var(--gris-oscuro);
+  margin-top: -0.5rem;
+}
+
+.chessboard__container{
+  display: flex;
+  flex-direction: column;
+  width: 36rem;
+  height: 36rem;
+  background-color:var(--gris-oscuro);
+  margin: 0rem 1rem 1rem 20rem ;
+  color: #fff
+}
+
+.gamer__one{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 33rem;
+  height: 2.5rem;
+  background-color: var(--gris-oscuro);
+  margin: 0.5rem 0.5rem;
+  color: #fff;
+
+}
+
+.chessboard__game{
+  display: flex;
+  flex-direction: row;
+  width: 32rem;
+  height: 32rem;
+}
+
+
+.logogamer__one{
+  height: 2.5rem;
+  width: 2.5rem;
+  background-image: url("../../images/1.png");
+  background-size: cover;
+  background-position: center;
+  margin-left: 3rem;
+  margin-right: 1rem;
+  background-color: var(--gris-claro);
+}
+
+.gamer__two{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 33rem;
+  height: 2.5rem;
+  color: #fff;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+
+}
+
+.logogamer__two{
+  height: 2.5rem;
+  width: 2.5rem;
+  background-image: url("../../images/1.png");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--gris-claro);
+  margin-right: 1rem;
+}
+
+.rigthside__container{
+  width: 31rem;
+  height: 40rem;
+  background-color: var(--gris-medium-oscuro);
+}
+
+.text__rightside{
+  text-align: center;
+  font-size: 4rem;
+  color: #fff;
+  font-weight: 700;
+}

@@ -1,0 +1,192 @@
+.container__navbar{
+   
+    display: flex;
+    flex-direction: column;
+    background-color: var(--verde-claro);
+    width: 10rem;
+    height: 42rem;
+    color: #000;
+    font-weight: 600;
+    position: fixed;
+    margin-top: -0.5rem;
+
+}
+
+.container__up-navbar{
+    display: flex;
+    flex-direction: column;
+    height: 42rem;
+    width: 10rem;
+    background-color:var(--verde-claro) ;
+}
+
+.logo{
+    width: 10rem;
+    height: 10rem;
+    background-image: url("../../images/logo.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.homepage__play{
+    display: flex;
+    flex-direction: row;
+    height: 2.8rem;
+    width: 9.7rem;
+    align-items: center;
+    margin-left: 0.2rem;
+
+}
+
+.homepage__play:hover{
+    background-color: var(  --rosa-suave);
+    cursor: pointer;
+}
+
+.play__logo{
+    display: flex;
+    justify-content: space-between;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url("../../images/1.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.puzzles__logo{
+    display: flex;
+    justify-content: space-between;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url("../../images/2.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.learn__logo{
+    display: flex;
+    justify-content: space-between;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url("../../images/3.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.watch__logo{
+    display: flex;
+    justify-content: space-between;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url("../../images/4.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.news__logo{
+    display: flex;
+    justify-content: space-between;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url("../../images/5.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.social__logo{
+    display: flex;
+    justify-content: space-between;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url("../../images/6.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.more__logo{
+    display: flex;
+    justify-content: space-between;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url("../../images/7.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.play__category {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+
+}
+
+.homepage__search{
+    margin: 1rem 0.5rem;
+    padding: 0.10rem 0.10rem;
+}
+
+.homepage__search input{
+    width: 7.8rem;
+    height: 2rem;
+    padding: 0.25rem 0.35rem 0.25rem 0.35rem;
+    background-color: var(--verde-oscuro);
+    color: #000;
+}
+
+.homepage__search input :focus{
+    outline: none;
+    font-size: 1rem;
+    
+    
+}
+
+.homepage__category{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+
+.button__signup{
+    padding: 0.25rem 0.35rem 0.25rem 0.35rem;
+    
+    
+}
+
+.homepage__signup{
+    width: 7.8rem;
+    height: 2rem;
+    background-color: var(--verde-oscuro);
+    color: #000;
+    font-size: 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.homepage__signup:hover{
+    background-color: var(--gris-claro) ;
+}
+
+.button_login{
+    padding: 0.25rem 0.35rem 0.25rem 0.35rem;
+    
+
+}
+
+.homepage__login{
+    width: 7.8rem;
+    height: 2rem;
+    background-color: var(--verde-oscuro);
+    color: #000;
+    font-size: 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+
+}
+
+.homepage__login:hover{
+    background-color: var(--gris-claro) ;
+}
+
