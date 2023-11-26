@@ -2,6 +2,8 @@ import React from "react";
 import "../../../assets/css/mainboardgame/mainboardgame.css";
 import { ColumnLabel, RowLabel } from "./RowLabel";
 import { ChessBoard } from "./Chessboard";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 const MainboardGame = () => {
   return (
@@ -16,7 +18,9 @@ const MainboardGame = () => {
             <RowLabel />
           </div>
           <div>
-            <ChessBoard />
+            <DndProvider backend={HTML5Backend}>
+              <ChessBoard />
+            </DndProvider>
             <ColumnLabel />
           </div>
         </div>

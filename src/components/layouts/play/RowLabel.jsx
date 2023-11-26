@@ -3,6 +3,7 @@ export const RowLabel = () => {
     <div style={{ display: "flex", flexDirection: "column" }}>
       {["8", "7", "6", "5", "4", "3", "2", "1"].map((number) => (
         <div
+          key={number}
           style={{
             width: "50px",
             height: "50px",
@@ -23,6 +24,7 @@ export const ColumnLabel = () => {
     <div style={{ display: "flex" }}>
       {["A", "B", "C", "D", "E", "F", "G", "H"].map((letter) => (
         <div
+          key={letter}
           style={{
             width: "50px",
             height: "50px",
