@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ReactComponent as KingWhite } from "../../../assets/images/king__white.svg";
 import { ReactComponent as QueenWhite } from "../../../assets/images/queen__white.svg";
 import { ReactComponent as BishopWhite } from "../../../assets/images/bishop__white.svg";
@@ -13,7 +13,7 @@ import { ReactComponent as KnightBlack } from "../../../assets/images/knight__bl
 import { ReactComponent as RookBlack } from "../../../assets/images/rook__black.svg";
 import { ReactComponent as PawnBlack } from "../../../assets/images/pawn__black.svg";
 
-const ChessPiece = ({ type, color, position, handleDrag, handleDrop }) => {
+const ChessPiece = ({ type, color }) => {
   const getPieceComponent = () => {
     if (color === "white") {
       switch (type) {
