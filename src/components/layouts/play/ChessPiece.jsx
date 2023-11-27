@@ -51,7 +51,6 @@ const ChessPiece = ({ type, color }) => {
   };
 
   const PieceComponent = getPieceComponent();
-
   return (
     <div
       //onMouseDown={() => handleDrag(type, color, position)}

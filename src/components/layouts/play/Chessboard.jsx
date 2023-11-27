@@ -1,29 +1,45 @@
 import Square from "./Square";
 import { useEffect, useState } from "react";
 import { initialBoardState } from "./InitialBoardState";
+import PieceControlMove from "./PieceControlMove";
 
 export const ChessBoard = () => {
   const [boardState, setBoardState] = useState(initialBoardState);
   const [selectedPiece, setSelectedPiece] = useState(null);
   const [selectedSquareIndex, setSelectedSquareIndex] = useState(null); // Nuevo estado para la casilla seleccionada
+  const [countMovement, setCountMovement] = useState(0);
 
+  console.log("countMovement....", countMovement);
   const handleSquareClick = (squareIndex) => {
     const selectedSquare = boardState[squareIndex];
-    console.log(selectedSquare);
+    setSelectedSquareIndex(squareIndex);
 
-    setSelectedSquareIndex(squareIndex); // Actualiza la casilla seleccionada
+    if (selectedSquare != null) {
+      const isValidMove = PieceControlMove(
+        selectedSquare.pieceType,
+        selectedSquare.pieceColor,
+        squareIndex,
+        countMovement
+      );
+      if (isValidMove) {
+        if (selectedSquare.pieceType && !selectedPiece) {
+          // Seleccionar la pieza en esta posición
+          setSelectedPiece({
+            index: squareIndex,
+            ...selectedSquare,
+          });
+          setCountMovement((countMovement) => countMovement + 1);
+        }
 
-    if (selectedSquare.pieceType && !selectedPiece) {
-      // Seleccionar la pieza en esta posición
+        if (selectedPiece) {
+          // Mover la pieza seleccionada a la nueva posición
+          // Actualizar el estado del tablero
 
-      setSelectedPiece({
-        index: squareIndex,
-        ...selectedSquare,
-      });
-    } else if (selectedPiece) {
-      // Mover la pieza seleccionada a la nueva posición
-      // Actualizar el estado del tablero
-      setSelectedPiece({ ...selectedPiece, newIndex: squareIndex });
+          setSelectedPiece({ ...selectedPiece, newIndex: squareIndex });
+        }
+      }
+
+      // Actualiza la casilla seleccionada
     }
   };
 
@@ -52,6 +68,7 @@ export const ChessBoard = () => {
     };
 
     setBoardState(newBoardState);
+
     setSelectedPiece(null);
   };
 
@@ -86,6 +103,13 @@ export const ChessBoard = () => {
   return (
     <div style={{ display: "grid", gridTemplateColumns: "repeat(8, 50px)" }}>
       {createBoard()}
+      {/* {selectedPiece && (
+        // <PieceControlMove
+        //   pieceType={selectedPiece.pieceType}
+        //   pieceColor={selectedPiece.pieceColor}
+        //   newIndex={selectedPiece.newIndex}
+        // />
+      )} */}
     </div>
   );
 };
